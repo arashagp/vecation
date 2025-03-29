@@ -20,10 +20,10 @@ jobs:
           node-version: lts/*
 
       - name: Install Dependencies
-        run: corepack yarn install && yarn install
+        run: npm install
 
       - name: Build Eleventy Site
-        run: yarn dlx @11ty/eleventy
+        run: npm build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
