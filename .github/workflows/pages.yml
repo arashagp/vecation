@@ -19,9 +19,8 @@ jobs:
         with:
           node-version: lts/*
 
-      - run: corepack yarn install --immutable
       - name: Install Dependencies
-        run: yarn install
+        run: corepack yarn install && yarn install
 
       - name: Build Eleventy Site
         run: yarn dlx @11ty/eleventy
